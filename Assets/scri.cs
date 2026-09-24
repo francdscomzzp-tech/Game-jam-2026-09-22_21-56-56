@@ -7,6 +7,8 @@ public class scri : MonoBehaviour
     public float speed = 8f;
     private int direzione;
 
+    public Transform groundCheck;
+    public LayerMask groundLayer;
     // Update is called once per frame
     void Update()
     {
@@ -26,10 +28,20 @@ public class scri : MonoBehaviour
         {
             transform.localScale = new Vector3(direzione, 1, 1);
         }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && IsGrounded()) 
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpPower);
+        }
     }
 
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(direzione * speed, rb.linearVelocityY);
+    }
+    
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
     }
 }

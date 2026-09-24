@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 100369538}
   - component: {fileID: 100369537}
   - component: {fileID: 100369536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gradino2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 533556045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397,6 +397,10 @@ MonoBehaviour:
   rb: {fileID: 911886601}
   jumpPower: 16
   speed: 8
+  groundCheck: {fileID: 533556046}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!212 &911886603
 SpriteRenderer:
   serializedVersion: 3
@@ -466,7 +470,7 @@ Transform:
   m_GameObject: {fileID: 911886599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.41, y: -3.3, z: 0}
+  m_LocalPosition: {x: -2.98, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -621,7 +625,7 @@ GameObject:
   - component: {fileID: 1559253035}
   - component: {fileID: 1559253034}
   - component: {fileID: 1559253033}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gradino4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +764,7 @@ GameObject:
   - component: {fileID: 1812951411}
   - component: {fileID: 1812951410}
   - component: {fileID: 1812951412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pavimento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +903,7 @@ GameObject:
   - component: {fileID: 2011934180}
   - component: {fileID: 2011934179}
   - component: {fileID: 2011934178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gradino3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1042,7 @@ GameObject:
   - component: {fileID: 2046583822}
   - component: {fileID: 2046583821}
   - component: {fileID: 2046583820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gradino1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
