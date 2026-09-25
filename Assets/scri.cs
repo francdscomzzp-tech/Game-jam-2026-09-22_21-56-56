@@ -9,6 +9,8 @@ public class scri : MonoBehaviour
 
     public Transform groundCheck;
     public LayerMask groundLayer;
+
+    public Animator anim;
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +35,12 @@ public class scri : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpPower);
         }
+        anim.SetBool("IsGrounded", IsGrounded());
+        if (direzione != 0)
+            anim.SetBool("IsRunning", true);
+        else
+            anim.SetBool("IsRunning", false);
+        anim.SetFloat("YVelocity", rb.linearVelocity.y);
     }
 
     private void FixedUpdate()
