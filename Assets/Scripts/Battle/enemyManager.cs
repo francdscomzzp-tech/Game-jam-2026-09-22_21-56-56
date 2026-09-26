@@ -1,24 +1,24 @@
 using UnityEngine;
+using System.Collections.Generic;
+using TMPro; // per usare il Text
 
 public class enemyManager : MonoBehaviour
 {
+    // script -------------------------
     public battleManager battleManager;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // text ---------------------------
+    public TextMeshProUGUI attackerText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void think(){
         battleManager.setTarget(0);
         battleManager.setDamage(2);
-        battleManager.attack();
+
+        attackerText.text = battleManager.target_turn.ToString() + " is going to attack";
+
+        StartCoroutine(battleManager.tryDash());
     }
+
+
 }
